@@ -1,0 +1,14 @@
+[DEFAULT]
+local_ip = "{{ local_ip }}"
+undercloud_public_host = "{{ undercloud_public_host }}"
+undercloud_admin_host = "{{ undercloud_admin_host }}"
+local_interface = "{{ localnic }}"
+container_images_file = /home/{{ ostackuser }}/containers-prepare-parameter.yaml
+
+[ctlplane-subnet]
+cidr =  "{{ ctlplane_cidr }}"
+gateway = "{{ gateway }}"
+dhcp_start = "{{ dhcp_start }}"
+dhcp_end = "{{ dhcp_end }}"
+dns_nameservers = "{{ dns_nameservers }}"
+

@@ -17,3 +17,11 @@
     group: stack
     mode: '0600'
 
+- name: "install_undercloud| Create containers-prepare-parameter.yaml"
+  ansible.builtin.template:
+    src: icontainers-prepare-parameter.yaml.j2
+    dest: "/home/{{ ostackuser }}/containers-prepare-parameter.yaml"
+    owner: stack
+    group: stack
+    mode: '0600'
+

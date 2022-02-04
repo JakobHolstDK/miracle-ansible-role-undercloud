@@ -5,8 +5,8 @@
 - name: "main | Include commen variables."
   include_vars: "common.yml"
 
-#- name: "main | Installing pre dependencies of xorg-server"
-#  include: "{{ ansible_os_family }}.yml"
+- name: "main | Installing pre dependencies of xorg-server"
+  include: "{{ ansible_os_family }}.yml"
 
 - name: "main | Install undercloud "
   include: "install_undercloud.yml" 

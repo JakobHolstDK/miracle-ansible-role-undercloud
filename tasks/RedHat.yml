@@ -1,7 +1,7 @@
 ---
 # This task installs pre dependencies of xorg
 - name: "install_undercloud |  Register rhel"
-  shell: "subscription-manager rgister --org=6207854 --activationkey=GEC-RHOSP-KEY"
+  shell: "subscription-manager register --org=6207854 --activationkey=GEC-RHOSP-KEY"
   become: True
 
 - name: "install_undercloud | set hostname --transient "

@@ -1,2 +1,11 @@
-- name: "install_undercloud | Installing undercloud on {{ fqdn }}"
-  shell: "echo template"
+---
+- name: "install_undercloud | directory images"
+  file:
+    path: "/home/{{ ostackuser }}/images"
+    state: directory
+
+- name: "install_undercloud | directory templates"
+  file:
+    path: "/home/{{ ostackuser }}/templates"
+    state: directory
+    

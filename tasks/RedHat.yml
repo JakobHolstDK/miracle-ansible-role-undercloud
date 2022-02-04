@@ -9,7 +9,7 @@
   become: True
 
 - name: "install_undercloud |  Register rhel"
-  shell: "subscription-manager register --org=6207854 --activationkey=GEC-RHOSP-KEY"
+  shell: "subscription-manager register --force --org=6207854 --activationkey=GEC-RHOSP-KEY"
   become: True
 
 - name: "install_undercloud | attach pool "

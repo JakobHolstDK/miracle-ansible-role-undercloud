@@ -5,5 +5,5 @@
 - name: "main | Installing pre dependencies of xorg-server"
   include: "{{ ansible_os_family }}.yml"
 
-- name: "main | template "
-  include: "template.yml" 
+- name: "main | Install undercloud "
+  include: "install_undercloud.yml" 

@@ -1,7 +1,7 @@
 ---
 # This task installs pre dependencies of xorg
-- name: "Template| Installing pre dependencies to use xorg-server"
-  pacman:
-    name: libglvnd
+- name: " RedHat| Installing pre dependencies for Redhat"
+  yum:
+    name:   
     state: present
   when: ansible_os_family == "Redhat"

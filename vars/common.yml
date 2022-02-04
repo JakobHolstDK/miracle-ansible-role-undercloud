@@ -1,0 +1,4 @@
+---
+domain: "gec.test"
+hostname: "undercloud"
+fqdn: "{{ hostname }}.{{ domain }}"

@@ -1,2 +1,2 @@
-- name: "Template| Installing pre dependencies to use xorg-server"
+- name: "install_undercloud | Installing undercloud on {{ fqdn }}"
   shell: "echo template"

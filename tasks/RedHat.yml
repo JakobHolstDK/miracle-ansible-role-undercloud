@@ -1,7 +1,10 @@
 ---
 # This task installs pre dependencies of xorg
-- name: " RedHat| Installing pre dependencies for Redhat"
-  yum:
-    name:   
-    state: present
-  when: ansible_os_family == "Redhat"
+- name: "install_undercloud |  Register rhel"
+  shell: "subscription-manager rgister --org=6207854 --activationkey=GEC-RHOSP-KEY"
+  become: True
+
+- name: "install_undercloud | set hostname --transient "
+  shell: "subscription-manager attach --pool={{ ostack_pool }}"
+  become: True
+

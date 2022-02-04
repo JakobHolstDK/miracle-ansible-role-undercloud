@@ -9,10 +9,16 @@
     path: "/home/{{ ostackuser }}/templates"
     state: directory
 
-- name: "install_undercloud | "
+- name: "install_undercloud | Set hostname "
   shell: "hostnamectl set-hostname {{ fqdn }}"
   become: True
 
-- name: "install_undercloud | "
+- name: "install_undercloud | set hostname --transient "
   shell: "hostnamectl --transient set-hostname {{ fqdn }}"
   become: True
+
+
+- name: "install_undercloud | set hostname --transient "
+  shell: "subscription-manager attach --pool={{ ostack_pool }}"
+  become: True
+

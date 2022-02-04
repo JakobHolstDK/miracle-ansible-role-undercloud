@@ -8,4 +8,11 @@
   file:
     path: "/home/{{ ostackuser }}/templates"
     state: directory
-    
+
+- name: "install_undercloud | "
+  shell: "hostnamectl set-hostname {{ fqdn }}"
+  become: True
+
+- name: "install_undercloud | "
+  shell: "hostnamectl --transient set-hostname {{ fqdn }}"
+  become: True

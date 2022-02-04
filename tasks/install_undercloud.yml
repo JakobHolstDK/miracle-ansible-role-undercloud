@@ -9,5 +9,11 @@
     path: "/home/{{ ostackuser }}/templates"
     state: directory
 
-
+- name: "install_undercloud| Create undercloud.conf"
+  ansible.builtin.template:
+    src: undercloud.conf.j2
+    dest: "/home/{{ ostackuser }}"
+    owner: stack
+    group: stack
+    mode: '0600'
     

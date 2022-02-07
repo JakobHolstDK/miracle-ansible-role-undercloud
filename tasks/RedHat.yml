@@ -43,5 +43,9 @@
   become: True
 
 - name: "install_undercloud | enable needed repos "
+  shell: "dnf install -y nfs-utils"
+  become: True
+
+- name: "install_undercloud | enable needed repos "
   shell: "dnf install -y python3-tripleoclient"
   become: True

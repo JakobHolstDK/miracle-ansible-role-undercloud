@@ -9,7 +9,7 @@
   become: True
 
 - name: "install_undercloud |  Register rhel"
-  shell: "subscription-manager register --force --org={{ myorg }}--activationkey={{ mykey }}"
+  shell: "subscription-manager register --force --org={{ myorg }} --activationkey={{ mykey }}"
   become: True
 
 - name: "install_undercloud | attach pool "

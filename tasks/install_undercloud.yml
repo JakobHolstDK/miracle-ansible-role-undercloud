@@ -9,6 +9,23 @@
     path: "/home/{{ ostackuser }}/templates"
     state: directory
 
+
+- name: Mount an NFS volume
+  ansible.posix.mount:
+    src: 10.1.0.106:/images
+    path: /images
+    opts: rw,sync,soft,intr
+    state: mounted
+    fstype: nfs
+
+- name: Mount an NFS volume
+  ansible.posix.mount:
+    src: 10.1.0.106:/templates
+    path: /templates
+    opts: rw,sync,soft,intr
+    state: mounted
+    fstype: nfs
+
 - name: "install_undercloud| Create undercloud.conf"
   ansible.builtin.template:
     src: undercloud.conf.j2

@@ -16,6 +16,7 @@
     opts: rw,sync,soft,intr
     state: mounted
     fstype: nfs
+  become: True
 
 - name: Mount an NFS volume
   mount:
@@ -24,6 +25,7 @@
     opts: rw,sync,soft,intr
     state: mounted
     fstype: nfs
+  become: True
 
 - name: "install_undercloud| Create undercloud.conf"
   ansible.builtin.template:

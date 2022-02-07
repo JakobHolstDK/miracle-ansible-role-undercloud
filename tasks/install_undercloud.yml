@@ -9,23 +9,23 @@
     path: "/home/{{ ostackuser }}/templates"
     state: directory
 
-- name: Mount an NFS volume
-  mount:
-    src: 10.1.0.106:/images
-    path: /home/stack/images
-    opts: rw,sync,soft,intr
-    state: mounted
-    fstype: nfs
-  become: True
+#- name: Mount an NFS volume
+#  mount:
+#    src: 10.1.0.106:/images
+#    path: /home/stack/images
+#    opts: rw,sync,soft,intr
+#    state: mounted
+#    fstype: nfs
+#  become: True
 
-- name: Mount an NFS volume
-  mount:
-    src: 10.1.0.106:/templates
-    path: /home/stack/templates
-    opts: rw,sync,soft,intr
-    state: mounted
-    fstype: nfs
-  become: True
+#- name: Mount an NFS volume
+#  mount:
+#    src: 10.1.0.106:/templates
+#    path: /home/stack/templates
+#    opts: rw,sync,soft,intr
+#    state: mounted
+#    fstype: nfs
+#  become: True
 
 - name: "install_undercloud| Create undercloud.conf"
   ansible.builtin.template:

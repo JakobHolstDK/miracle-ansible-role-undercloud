@@ -17,6 +17,7 @@
 - name: "install_undercloud | attach pool "
   shell: "subscription-manager attach --pool={{ ostack_pool }}"
   become: True
+  ignore_errors: yes
 
 - name: "install_undercloud | set release "
   shell: "sudo subscription-manager release --set={{ os_release }}"
